@@ -39,7 +39,7 @@ class DatabaseLogHandler extends AbstractProcessingHandler
                 'updated_at' => now(),
             ];
 
-            DB::table('logs')->insert($payload);
+            DB::table(config('db-logger.table', 'db_logger'))->insert($payload);
 
 //            file_put_contents(storage_path('logs/db-handler-debug.txt'),
 //                date('H:i:s') . " - INSERT SUCCESS\n", FILE_APPEND);

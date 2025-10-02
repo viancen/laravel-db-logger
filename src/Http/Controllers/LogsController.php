@@ -60,7 +60,7 @@ class LogsController extends Controller
             $sort = 'created_at';
         }
 
-        $query = DB::table('logs')
+        $query = DB::table(config('db-logger.table', 'db_logger'))
             ->select([
                 'id','level','channel','message','context','extra',
                 'request_id','ip_address','user_agent','user_id','created_at'

@@ -8,7 +8,7 @@ return [
     */
 
     // Route prefix voor dashboard
-    'route_prefix' => env('DB_LOGGER_ROUTE_PREFIX', 'db_logger'),
+    'route_prefix' => env('DB_LOGGER_ROUTE_PREFIX', 'db-logger'),
 
     // Middleware voor routes
     'middleware' => ['web', 'auth'],
@@ -21,7 +21,7 @@ return [
     ],
 
     // Table name
-    'table' => 'logs',
+    'table' => 'db_logger',
 
     // Enable/disable logging
     'enabled' => env('DB_LOGGER_ENABLED', true),

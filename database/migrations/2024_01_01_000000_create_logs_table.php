@@ -26,8 +26,8 @@ return new class extends Migration
 
         // Voor PostgreSQL: extra indexes
         if (DB::connection()->getDriverName() === 'pgsql') {
-            DB::statement('CREATE INDEX logs_context_gin ON ' . config('db-logger.table', 'logs') . ' USING gin (context)');
-            DB::statement('CREATE INDEX logs_extra_gin ON ' . config('db-logger.table', 'logs') . ' USING gin (extra)');
+            DB::statement('CREATE INDEX logs_context_gin ON ' . config('db-logger.table', 'db_logger') . ' USING gin (context)');
+            DB::statement('CREATE INDEX logs_extra_gin ON ' . config('db-logger.table', 'db_logger') . ' USING gin (extra)');
         }
     }
 
