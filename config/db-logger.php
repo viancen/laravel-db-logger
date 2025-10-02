@@ -8,7 +8,7 @@ return [
     */
 
     // Route prefix voor dashboard
-    'route_prefix' => env('DB_LOGGER_ROUTE_PREFIX', 'logs'),
+    'route_prefix' => env('DB_LOGGER_ROUTE_PREFIX', 'db_logger'),
 
     // Middleware voor routes
     'middleware' => ['web', 'auth'],

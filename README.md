@@ -43,3 +43,20 @@ php artisan migrate
 ### Configuration
 Update your middleware and other configurations in `config/db-logger.php`:
 
+### Setup logging
+Edit your `config/logging.php`
+```
+'stack' => [
+    'driver' => 'stack',
+    'channels' => ['single', 'db'], // Add 'db'
+    'ignore_exceptions' => false,
+],
+ // Database channel via monolog custom handler
+'db' => [
+    'driver' => 'custom',
+    'via' => \App\Logging\CreateDatabaseLogger::class,
+],
+```
+
+### Check your dashboard
+- http://<your-site>/logs (or defined path)
