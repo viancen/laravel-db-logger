@@ -13,6 +13,9 @@ Beautiful database logging with dashboard for Laravel 11+.
 - Export to JSON
 - PostgreSQL & MySQL support
 
+### Todo
+- Logrotate, **beware**: table can grow very fast at this moment
+
 ## Installation
 ```bash
 composer require viancen/laravel-db-logger
@@ -37,6 +40,6 @@ php artisan vendor:publish --tag=db-logger-assets
 php artisan migrate
 ```
 
-## Middleware Configuration
-Update your middleware config `config/db-logger.php`:
+### Configuration
+Update your middleware and other configurations in `config/db-logger.php`:
 
