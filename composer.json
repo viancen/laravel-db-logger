@@ -1,0 +1,32 @@
+{
+  "name": "viancen/laravel-db-logger",
+  "description": "Database logging with beautiful dashboard for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["laravel", "logging", "database", "monolog"],
+  "authors": [
+    {
+      "name": "Vincent",
+      "email": "vincent@viancen.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0|^12.0",
+    "monolog/monolog": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Viancen\\LaravelDbLogger\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Viancen\\LaravelDbLogger\\DbLoggerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
